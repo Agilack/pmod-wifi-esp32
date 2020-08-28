@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PMOD Wifi ESP32"
-Date "2020-07-20"
-Rev "1"
+Date "2020-08-28"
+Rev "2"
 Comp "Agilack"
 Comment1 "License: CC-by-SA 2.0"
 Comment2 ""
@@ -564,15 +564,15 @@ Wire Wire Line
 Wire Wire Line
 	4550 2850 4650 2850
 Text GLabel 4650 2850 2    45   BiDi ~ 0
-FL_D0
+FL_SDO
 Wire Wire Line
 	4650 2750 4550 2750
 Text GLabel 4650 2950 2    45   BiDi ~ 0
-FL_D1
+FL_SDI
 Text GLabel 4650 3050 2    45   BiDi ~ 0
-FL_D2
+FL_SHD
 Text GLabel 4650 3150 2    45   BiDi ~ 0
-FL_D3
+FL_SWP
 Wire Wire Line
 	4650 3150 4550 3150
 Wire Wire Line
@@ -657,7 +657,6 @@ Wire Wire Line
 	1650 3800 1650 3750
 Wire Wire Line
 	1550 3750 1550 3800
-NoConn ~ 1950 3400
 NoConn ~ 1950 3500
 Text GLabel 4650 3950 2    45   Input ~ 0
 PMOD_RTS
@@ -682,7 +681,6 @@ NoConn ~ 3450 2750
 NoConn ~ 3450 2850
 NoConn ~ 3450 2950
 NoConn ~ 3450 3050
-NoConn ~ 3450 3150
 NoConn ~ 3450 3250
 $Comp
 L pmod-wifi-esp32:M25P16-VME U2
@@ -717,13 +715,13 @@ Wire Wire Line
 Wire Wire Line
 	3500 5350 3400 5350
 Text GLabel 4550 5250 2    50   BiDi ~ 0
-FL_D0
+FL_SDI
 Text GLabel 4550 5400 2    50   BiDi ~ 0
-FL_D1
+FL_SDO
 Text GLabel 4550 5600 2    50   BiDi ~ 0
-FL_D2
+FL_SWP
 Text GLabel 4550 5750 2    50   BiDi ~ 0
-FL_D3
+FL_SHD
 Wire Wire Line
 	4550 5750 4450 5750
 Wire Wire Line
@@ -962,4 +960,12 @@ Wire Wire Line
 	6400 4900 6400 4850
 Wire Wire Line
 	6400 4450 6400 4400
+Text GLabel 3350 3150 0    45   Input ~ 0
+PMOD_BOOT
+Wire Wire Line
+	3350 3150 3450 3150
+Text GLabel 2050 3400 2    45   Output ~ 0
+PMOD_BOOT
+Wire Wire Line
+	2050 3400 1950 3400
 $EndSCHEMATC
