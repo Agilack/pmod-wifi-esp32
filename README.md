@@ -4,19 +4,32 @@ PMOD Wifi ESP32
 This project is a PMOD module that allow to add a wireless wifi interface to a
 project.
 
-! ! ! ! Major bug into rev1 (see below)
-
-![PCB rev 1](doc/pcb-rev1-top.jpg)
-
-![Routing preview](doc/preview-pcb.png)
-
-![3D preview](doc/preview-3d.png)
-
-Known bugs
+CAD source
 ----------
 
- - Communication with external flash does not work so it is not possible to
-   boot from flash on rev1 ! The signal numbers "0" to "3" as seen into
-   datasheet have been used (see fig below) but this mapping is invalid.
+This board has been designed using KiCad EDA (version 5). All sources files
+(schematics, routing, ...) are available into the `prj-kicad` folder. You can
+re-use this design under terms of the Creative Commons ShareAlike license
+(CC BY-SA)
 
-![Bug flash mapping](doc/bug-rev1-flash.png)
+<table>
+<tr>
+<td><img src="doc/kicad-sch.png"     alt="KiCad Schematics"/></td>
+<td><img src="doc/kicad-routing.png" alt="KiCad routing" /></td>
+</tr>
+<tr>
+<td>Fig1: Preview of the KiCad schematics</td>
+<td>Fig2: Preview of the KiCad routing</td>
+</tr>
+</table>
+
+![PCB 3D Preview](doc/pcb-rev2-3d.png)
+
+Previous version (rev1)
+-----------------------
+
+A major hardware bug into external flash memory routing have been found into
+previous version. The rev1 must be considered unusable. More informations
+about this bug is available into history (see tag `rev1`)
+
+![PCB rev 1](doc/pcb-rev1-top.jpg)
